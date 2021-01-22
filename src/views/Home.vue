@@ -4,6 +4,7 @@
     <About v-bind="about" />
     <Services v-bind="services" />
     <Portfolio v-bind="portfolio" />
+    <Footer v-bind="footer" />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Hero from '@/components/Hero.vue';
 import About from '@/components/About.vue';
 import Services from '@/components/Services.vue';
 import Portfolio from '@/components/Portfolio.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'Home',
@@ -79,6 +81,15 @@ export default {
           },
         ],
       },
+      footer: {
+        author: 'John Doe',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, recusandae?',
+        nav: [
+          { name: 'About', to: '/' },
+          { name: 'Services', to: '/' },
+          { name: 'Portfolio', to: '/' },
+        ],
+      },
     };
   },
   components: {
@@ -86,6 +97,7 @@ export default {
     About,
     Services,
     Portfolio,
+    Footer,
   },
 };
 </script>
