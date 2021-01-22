@@ -2,12 +2,14 @@
   <div class="home">
     <Hero v-bind="hero" />
     <About v-bind="about" />
+    <Services v-bind="services" />
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue';
 import About from '@/components/About.vue';
+import Services from '@/components/Services.vue';
 
 export default {
   name: 'Home',
@@ -26,11 +28,36 @@ export default {
           unde obcaecati non aut quod. Nihil commodi eius nesciunt assumenda impedit
           doloremque repudiandae!`,
       },
+      services: {
+        title: 'Services',
+        image: {
+          src: '/images/macbook.png',
+          alt: 'macbook',
+        },
+        services: [
+          {
+            title: 'UX Strategy',
+            icon: '/images/chess.svg',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          },
+          {
+            title: 'UX Strategy',
+            icon: '/images/wireframe.svg',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          },
+          {
+            title: 'UX Strategy',
+            icon: '/images/virtual.svg',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          },
+        ],
+      },
     };
   },
   components: {
     Hero,
     About,
+    Services,
   },
 };
 </script>
