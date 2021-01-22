@@ -3,6 +3,7 @@
     <Hero v-bind="hero" />
     <About v-bind="about" />
     <Services v-bind="services" />
+    <Portfolio v-bind="portfolio" />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Hero from '@/components/Hero.vue';
 import About from '@/components/About.vue';
 import Services from '@/components/Services.vue';
+import Portfolio from '@/components/Portfolio.vue';
 
 export default {
   name: 'Home',
@@ -52,12 +54,38 @@ export default {
           },
         ],
       },
+      portfolio: {
+        projects: [
+          {
+            name: 'Project 1',
+            image: {
+              src: '/images/portfolio-1.svg',
+              alt: 'Project 1',
+            },
+          },
+          {
+            name: 'Project 2',
+            image: {
+              src: '/images/portfolio-2.svg',
+              alt: 'Project 2',
+            },
+          },
+          {
+            name: 'Project 3',
+            image: {
+              src: '/images/portfolio-3.svg',
+              alt: 'Project 3',
+            },
+          },
+        ],
+      },
     };
   },
   components: {
     Hero,
     About,
     Services,
+    Portfolio,
   },
 };
 </script>
